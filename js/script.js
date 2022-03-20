@@ -14,8 +14,9 @@ $submitInput.on("click", (event) => {
   skills.push(newSkill)
   
   const $li = $("<li>")
-  $li.text(newSkill)
+  $li.html(newSkill)
   $ul.append($li)
+  // $ul.append($redBut)
 
   // $('<div/ class = "box-red">X</div>').appendTo('.these-items');
   // $('div.box-red').fadeIn().css('display', 'inline');
@@ -28,16 +29,24 @@ $submitInput.on("click", (event) => {
   // });
 
   $(document).ready(function() {
-    $("ul").addClass("redBut");
-    $("ul > li").prepend($redBut);
+    $("li").addClass("redBut");
+    // $("ul > li").prepend($redBut);
+    $("li").prepend($redBut)
   });
 
   const remove = (event) => {
-    const $target = $(event.target)
-    $target.remove()
+    const $target = $(event.$li)
+    $li.remove()
   }
   $li.on("click", remove)
   $textInput.val("")
 
+  // $redBut.on("click", remove)
+  // $textInput.val("")
 })
 
+  // $(document).ready(function()
+  // $(redBut).click(function() {
+  //   $(this).parent($li).remove();
+  // });
+// });
