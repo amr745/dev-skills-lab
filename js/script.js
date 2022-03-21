@@ -12,7 +12,7 @@ $submitInput.on("click", (event) => {
   skills.push(newSkill);
   
   const $li = $("<li>")
-  $li.html(`<button class = 'redBut'>X</button>${newSkill}`)
+  $li.html(`<button class = 'redBut'>X</button> ${newSkill}`)
   $ul.append($li)
 
   const remove = (event) => {
